@@ -89,7 +89,8 @@ jobs:
           ./artifacts/*
         body_path: ./CHANGELOG.md
         draft: false
-
+      env:
+        GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
   # docker-build:
   #   runs-on: ubuntu-latest
   #   name: Build the docker image
